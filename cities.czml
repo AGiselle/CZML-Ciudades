@@ -1,34 +1,53 @@
 [
-  { "id": "document", "name": "Ciudades con figuras", "version": "1.0" },
-
+  {
+    "id": "document",
+    "name": "Ciudades con figuras",
+    "version": "1.0",
+    "clock": {
+      "interval": "2025-08-16T12:00:00Z/2025-08-16T12:01:00Z",
+      "currentTime": "2025-08-16T12:00:00Z",
+      "multiplier": 10,
+      "range": "LOOP_STOP"
+    }
+  },
   {
     "id": "ellipse-bogota",
     "name": "Elipse en Bogotá",
-    "position": { "cartographicDegrees": [-74.08175, 4.60971, 0] },
+    "position": {
+      "cartographicDegrees": [-74.08175, 4.60971, 0]
+    },
     "ellipse": {
-      "semiMajorAxis": 20000,
-      "semiMinorAxis": 10000,
-      "material": { "solidColor": { "color": { "rgba": [0, 255, 0, 150] } } },
+      "semiMajorAxis": 20000.0,
+      "semiMinorAxis": 10000.0,
+      "material": {
+        "solidColor": {
+          "color": { "rgba": [0, 255, 0, 150] }
+        }
+      },
       "extrudedHeight": {
         "epoch": "2025-08-16T12:00:00Z",
-        "number": [0, 0, 10, 5000, 20, 10000]
+        "number": [0, 0, 10, 5000, 20, 10000, 30, 20000]
       }
     }
   },
-
   {
     "id": "rectangle-medellin",
     "name": "Rectángulo en Medellín",
     "rectangle": {
-      "coordinates": { "wsenDegrees": [-75.6, 6.2, -75.55, 6.3] },
-      "material": { "solidColor": { "color": { "rgba": [255, 0, 0, 150] } } },
+      "coordinates": {
+        "wsenDegrees": [-75.6, 6.2, -75.55, 6.3]
+      },
+      "material": {
+        "solidColor": {
+          "color": { "rgba": [255, 0, 0, 150] }
+        }
+      },
       "extrudedHeight": {
         "epoch": "2025-08-16T12:00:00Z",
-        "number": [0, 0, 10, 3000, 20, 8000]
+        "number": [0, 0, 10, 3000, 20, 8000, 30, 15000]
       }
     }
   },
-
   {
     "id": "triangle-cali",
     "name": "Triángulo en Cali",
@@ -40,14 +59,17 @@
           -76.525, 3.48, 0
         ]
       },
-      "material": { "solidColor": { "color": { "rgba": [0, 0, 255, 150] } } },
+      "material": {
+        "solidColor": {
+          "color": { "rgba": [0, 0, 255, 150] }
+        }
+      },
       "extrudedHeight": {
         "epoch": "2025-08-16T12:00:00Z",
-        "number": [0, 0, 10, 4000, 20, 9000]
+        "number": [0, 0, 10, 4000, 20, 9000, 30, 18000]
       }
     }
   },
-
   {
     "id": "polygon-cartagena",
     "name": "Polígono en Cartagena",
@@ -60,10 +82,14 @@
           -75.55, 10.44, 0
         ]
       },
-      "material": { "solidColor": { "color": { "rgba": [255, 255, 0, 150] } } },
+      "material": {
+        "solidColor": {
+          "color": { "rgba": [255, 255, 0, 150] }
+        }
+      },
       "extrudedHeight": {
         "epoch": "2025-08-16T12:00:00Z",
-        "number": [0, 0, 10, 2000, 20, 6000]
+        "number": [0, 0, 10, 2000, 20, 6000, 30, 12000]
       }
     }
   }
