@@ -14,17 +14,16 @@
   <body>
     <div id="cesiumContainer"></div>
     <script>
-      // Inicializar el visor con terreno mundial
+      // Crear visor con el terreno correcto en CesiumJS 1.120
       const viewer = new Cesium.Viewer("cesiumContainer", {
-        terrain: Cesium.createWorldTerrain()
+        terrainProvider: Cesium.CesiumTerrainProvider.fromWorldTerrain()
       });
 
-      // Cargar el archivo CZML
+      // Cargar el archivo CZML (tiene las figuras)
       const czmlDataSource = new Cesium.CzmlDataSource();
       viewer.dataSources.add(czmlDataSource);
 
       czmlDataSource.load("cities.czml").then(function() {
-        // Centrar la vista en las entidades del CZML
         viewer.zoomTo(czmlDataSource);
       });
     </script>
