@@ -6,7 +6,7 @@
     "clock": {
       "interval": "2025-08-01T00:00:00Z/2025-08-29T23:59:59Z",
       "currentTime": "2025-08-01T00:00:00Z",
-      "multiplier": 3600
+      "multiplier": 1000
     }
   },
   {
