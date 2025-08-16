@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <!DOCTYPE html>
+<html lang="es">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Figuras Geométricas en Ciudades de Colombia</title>
-    <script src="https://cesium.com/downloads/cesiumjs/releases/1.119/Build/Cesium/Cesium.js"></script>
-    <link href="https://cesium.com/downloads/cesiumjs/releases/1.119/Build/Cesium/Widgets/widgets.css" rel="stylesheet">
+    <script src="https://cesium.com/downloads/cesiumjs/releases/1.121/Build/Cesium/Cesium.js"></script>
+    <link href="https://cesium.com/downloads/cesiumjs/releases/1.121/Build/Cesium/Widgets/widgets.css" rel="stylesheet">
     <style>
         html, body, #cesiumContainer {
             width: 100%;
@@ -19,15 +22,12 @@
 <body>
     <div id="cesiumContainer"></div>
     <script>
-        // ¡Importante! Reemplaza esto con tu token válido de Cesium Ion.
+        // Tu token de Cesium Ion.
         Cesium.Ion.defaultAccessToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJiZTQ4OWZjMi1hZTc0LTQwZTAtODM3MS00ODJmZjlkZWI4NTkiLCJpZCI6MzMxMzYwLCJpYXQiOjE3NTUwNDI1NjV9.tuXtvIQKeq0hz8Em6bpv3GctChxnN05tKnFKdS049GU';
 
         const viewer = new Cesium.Viewer('cesiumContainer', {
             terrain: Cesium.Terrain.fromWorldTerrain(),
-            imageryProvider: new Cesium.UrlTemplateImageryProvider({
-                url: "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
-                credit: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-            })
+            imageryProvider: Cesium.createWorldImagery()
         });
 
         const czmlDataSource = Cesium.CzmlDataSource.load('cities.czml');
