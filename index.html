@@ -1,26 +1,19 @@
-// Crear visor Cesium
-const viewer = new Cesium.Viewer("cesiumContainer", {
-    imageryProvider: new Cesium.OpenStreetMapImageryProvider({
-        url: "https://a.tile.openstreetmap.org/"
-    }),
-    baseLayerPicker: false,
-    timeline: true,
-    animation: true
-});
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Animación de Ciudades</title>
+    <script src="https://cesium.com/downloads/cesiumjs/releases/1.132/Build/Cesium/Cesium.js"></script>
+    <link href="https://cesium.com/downloads/cesiumjs/releases/1.132/Build/Cesium/Widgets/widgets.css" rel="stylesheet">
+    <style>
+        html, body, #cesiumContainer {
+            width: 100%; height: 100%; margin: 0; padding: 0; overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div id="cesiumContainer"></div>
+    <script src="program.js"></script>
+</body>
+</html>
 
-// Cargar CZML
-const czmlDataSource = new Cesium.CzmlDataSource();
-viewer.dataSources.add(czmlDataSource);
-
-// Ruta al archivo CZML (asegúrate que está en la misma carpeta)
-czmlDataSource.load("ciudades.czml").then(() => {
-    console.log("CZML cargado correctamente");
-    viewer.zoomTo(czmlDataSource);
-}).catch((error) => {
-    console.error("Error al cargar CZML:", error);
-});
-
-// Botón Play
-document.getElementById("playBtn").addEventListener("click", () => {
-    viewer.clock.shouldAnimate = true;
-});
