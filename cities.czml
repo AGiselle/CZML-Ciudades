@@ -1,7 +1,7 @@
 [
   {
     "id": "document",
-    "name": "Ciudades Animadas Escalonadas",
+    "name": "Ciudades Animadas",
     "version": "1.0",
     "clock": {
       "interval": "2025-08-16T12:00:00Z/2025-08-16T12:01:00Z",
@@ -12,7 +12,7 @@
   },
   {
     "id": "ellipse-bogota",
-    "name": "Elipse en Bogotá",
+    "name": "Elipse Bogotá",
     "position": { "cartographicDegrees": [-74.08175, 4.60971, 0] },
     "ellipse": {
       "semiMajorAxis": 20000,
@@ -23,30 +23,29 @@
   },
   {
     "id": "rectangle-medellin",
-    "name": "Rectángulo en Medellín",
+    "name": "Rectángulo Medellín",
     "rectangle": {
       "coordinates": { "wsenDegrees": [-75.65,6.15,-75.55,6.25] },
       "material": { "solidColor": { "color": { "rgba": [255,0,0,150] } } },
-      "extrudedHeight": { "epoch": "2025-08-16T12:00:10Z", "number": [0,0,10,15000] }
+      "extrudedHeight": { "epoch": "2025-08-16T12:00:05Z", "number": [0,0,10,15000] }
     }
   },
   {
     "id": "triangle-cali",
-    "name": "Triángulo en Cali",
+    "name": "Triángulo Cali",
     "polygon": {
       "positions": { "cartographicDegrees": [-76.55,3.45,0,-76.50,3.45,0,-76.525,3.48,0,-76.55,3.45,0] },
       "material": { "solidColor": { "color": { "rgba": [0,0,255,150] } } },
-      "extrudedHeight": { "epoch": "2025-08-16T12:00:20Z", "number": [0,0,10,18000] }
+      "extrudedHeight": { "epoch": "2025-08-16T12:00:10Z", "number": [0,0,10,18000] }
     }
   },
   {
     "id": "polygon-cartagena",
-    "name": "Polígono en Cartagena",
+    "name": "Polígono Cartagena",
     "polygon": {
       "positions": { "cartographicDegrees": [-75.60,10.40,0,-75.50,10.40,0,-75.50,10.45,0,-75.60,10.45,0,-75.60,10.40,0] },
       "material": { "solidColor": { "color": { "rgba": [255,255,0,150] } } },
-      "extrudedHeight": { "epoch": "2025-08-16T12:00:30Z", "number": [0,0,10,12000] }
+      "extrudedHeight": { "epoch": "2025-08-16T12:00:15Z", "number": [0,0,10,12000] }
     }
   }
 ]
-
