@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="utf-8" />
-  <title>CZML - Ciudades con Figuras</title>
+  <title>CZML - Ciudades Animadas</title>
   <script src="https://cesium.com/downloads/cesiumjs/releases/1.109/Build/Cesium/Cesium.js"></script>
   <link href="https://cesium.com/downloads/cesiumjs/releases/1.109/Build/Cesium/Widgets/widgets.css" rel="stylesheet" />
   <style>
@@ -14,8 +14,9 @@
 <body>
   <div id="cesiumContainer"></div>
   <script>
-    // Inicializar visor Cesium
+    // Crear visor con OSM (sin necesidad de token)
     const viewer = new Cesium.Viewer("cesiumContainer", {
+      imageryProvider: new Cesium.OpenStreetMapImageryProvider(),
       timeline: true,
       animation: true
     });
@@ -26,7 +27,7 @@
 
     czmlDataSource.load("cities.czml").then(() => {
       viewer.zoomTo(czmlDataSource);
-      console.log("CZML cargado correctamente");
+      console.log("CZML animado cargado correctamente");
     }).catch(err => {
       console.error("Error cargando CZML:", err);
     });
