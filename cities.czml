@@ -12,13 +12,9 @@
   {
     "id": "bogota-rectangle",
     "name": "Rectángulo en Bogotá",
-    "position": {
-      "cartographicDegrees": [-74.0721, 4.7110, 0]
-    },
+    "position": { "cartographicDegrees": [-74.0721, 4.7110, 0] },
     "rectangle": {
-      "coordinates": {
-        "wsen": [-74.12, 4.67, -74.02, 4.75]
-      },
+      "coordinates": { "wsen": [-74.12, 4.67, -74.02, 4.75] },
       "height": 0,
       "extrudedHeight": [
         { "interval": "2025-08-01T00:00:00Z/2025-08-06T23:59:59Z", "number": 1000 },
@@ -28,19 +24,13 @@
         { "interval": "2025-08-27T00:00:00Z/2025-08-29T23:59:59Z", "number": 9000 }
       ],
       "extrudedHeightReference": "RELATIVE_TO_GROUND",
-      "material": {
-        "solidColor": {
-          "color": { "rgba": [255, 0, 0, 150] }
-        }
-      }
+      "material": { "solidColor": { "color": { "rgba": [255, 0, 0, 150] } } }
     }
   },
   {
     "id": "medellin-ellipse",
     "name": "Elipse en Medellín",
-    "position": {
-      "cartographicDegrees": [-75.5674, 6.2442, 0]
-    },
+    "position": { "cartographicDegrees": [-75.5674, 6.2442, 0] },
     "ellipse": {
       "semiMinorAxis": 10000,
       "semiMajorAxis": 15000,
@@ -53,11 +43,7 @@
         { "interval": "2025-08-27T00:00:00Z/2025-08-29T23:59:59Z", "number": 8500 }
       ],
       "extrudedHeightReference": "RELATIVE_TO_GROUND",
-      "material": {
-        "solidColor": {
-          "color": { "rgba": [255, 0, 0, 150] }
-        }
-      }
+      "material": { "solidColor": { "color": { "rgba": [0, 0, 255, 150] } } }
     }
   },
   {
@@ -81,11 +67,7 @@
         { "interval": "2025-08-27T00:00:00Z/2025-08-29T23:59:59Z", "number": 8800 }
       ],
       "extrudedHeightReference": "RELATIVE_TO_GROUND",
-      "material": {
-        "solidColor": {
-          "color": { "rgba": [255, 0, 0, 150] }
-        }
-      }
+      "material": { "solidColor": { "color": { "rgba": [0, 255, 0, 150] } } }
     }
   },
   {
@@ -111,11 +93,7 @@
         { "interval": "2025-08-27T00:00:00Z/2025-08-29T23:59:59Z", "number": 9200 }
       ],
       "extrudedHeightReference": "RELATIVE_TO_GROUND",
-      "material": {
-        "solidColor": {
-          "color": { "rgba": [255, 0, 0, 150] }
-        }
-      }
+      "material": { "solidColor": { "color": { "rgba": [255, 255, 0, 150] } } }
     }
   }
 ]
