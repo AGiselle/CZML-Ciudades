@@ -19,23 +19,24 @@
 <body>
     <div id="cesiumContainer"></div>
     <script>
-        // Tu token de Cesium Ion.
-        Cesium.Ion.defaultAccessToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJiZTQ4OWZjMi1hZTc0LTQwZTAtODM3MS00ODJmZjlkZWI4NTkiLCJpZCI6MzMxMzYwLCJpYXQiOjE3NTUwNDI1NjV9.tuXtvIQKeq0hz8Em6bpv3GctChxnN05tKnFKdS049GU';
+        // Token Cesium Ion
+        Cesium.Ion.defaultAccessToken = 'TU_TOKEN_AQUI';
 
+        // Inicializar visor
         const viewer = new Cesium.Viewer('cesiumContainer', {
             terrain: Cesium.Terrain.fromWorldTerrain(),
             imageryProvider: new Cesium.UrlTemplateImageryProvider({
                 url: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
                 credit: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-            })
+            }),
+            timeline: true,
+            animation: true
         });
 
-        const czmlDataSource = Cesium.CzmlDataSource.load('cities.czml');
-        viewer.dataSources.add(czmlDataSource);
-
-        viewer.camera.flyTo({
-            destination: Cesium.Cartesian3.fromDegrees(-74.0721, 4.7110, 1200000),
-            duration: 2.0
+        // Cargar el CZML desde archivo
+        Cesium.CzmlDataSource.load('cities.czml').then(function(ds) {
+            viewer.dataSources.add(ds);
+            viewer.zoomTo(ds);
         });
     </script>
 </body>
