@@ -1,0 +1,87 @@
+[
+  {
+    "id": "document",
+    "name": "Ciudades Animadas CZML",
+    "version": "1.0",
+    "clock": {
+      "interval": "2025-08-01T00:00:00Z/2025-08-29T23:59:59Z",
+      "currentTime": "2025-08-17T01:00:00Z",
+      "multiplier": 90000,
+      "range": "LOOP"
+    }
+  },
+
+  {
+    "id": "bogota-ellipse",
+    "name": "Bogotá",
+    "position": { "cartographicDegrees": [-74.096, 4.629, 0] },
+    "ellipse": {
+      "semiMinorAxis": 100000,
+      "semiMajorAxis": 100000,
+      "height": 0,
+      "heightReference": "RELATIVE_TO_GROUND",
+      "extrudedHeight": [
+        { "interval": "2025-08-01T00:00:00Z/2025-08-06T23:59:59Z", "number": 100 },
+        { "interval": "2025-08-07T00:00:00Z/2025-08-13T23:59:59Z", "number": 1500 },
+        { "interval": "2025-08-14T00:00:00Z/2025-08-20T23:59:59Z", "number": 11500 }
+      ],
+      "extrudedHeightReference": "RELATIVE_TO_GROUND",
+      "material": { "solidColor": { "color": { "rgba": [255,0,0,150] } } }
+    }
+  },
+
+  {
+    "id": "cali-ellipse",
+    "name": "Cali",
+    "position": { "cartographicDegrees": [-76.525, 3.45, 0] },
+    "ellipse": {
+      "semiMinorAxis": 80000,
+      "semiMajorAxis": 80000,
+      "height": 0,
+      "heightReference": "RELATIVE_TO_GROUND",
+      "extrudedHeight": [
+        { "interval": "2025-08-01T00:00:00Z/2025-08-06T23:59:59Z", "number": 0 },
+        { "interval": "2025-08-07T00:00:00Z/2025-08-13T23:59:59Z", "number": 4000 },
+        { "interval": "2025-08-14T00:00:00Z/2025-08-20T23:59:59Z", "number": 10000 }
+      ],
+      "extrudedHeightReference": "RELATIVE_TO_GROUND",
+      "material": { "solidColor": { "color": { "rgba": [0,0,255,150] } } }
+    }
+  },
+
+  {
+    "id": "medellin-rectangle",
+    "name": "Medellín",
+    "rectangle": {
+      "coordinates": { "wsenDegrees": [-75.6, 6.2, -75.55, 6.3] },
+      "height": 0,
+      "heightReference": "RELATIVE_TO_GROUND",
+      "extrudedHeight": [
+        { "interval": "2025-08-01T00:00:00Z/2025-08-06T23:59:59Z", "number": 0 },
+        { "interval": "2025-08-07T00:00:00Z/2025-08-13T23:59:59Z", "number": 3000 },
+        { "interval": "2025-08-14T00:00:00Z/2025-08-20T23:59:59Z", "number": 15000 }
+      ],
+      "extrudedHeightReference": "RELATIVE_TO_GROUND",
+      "material": { "solidColor": { "color": { "rgba": [0,255,0,150] } } }
+    }
+  },
+
+  {
+    "id": "barranquilla-ellipse",
+    "name": "Barranquilla",
+    "position": { "cartographicDegrees": [-74.807, 10.968, 0] },
+    "ellipse": {
+      "semiMinorAxis": 60000,
+      "semiMajorAxis": 60000,
+      "height": 0,
+      "heightReference": "RELATIVE_TO_GROUND",
+      "extrudedHeight": [
+        { "interval": "2025-08-01T00:00:00Z/2025-08-06T23:59:59Z", "number": 0 },
+        { "interval": "2025-08-07T00:00:00Z/2025-08-13T23:59:59Z", "number": 8000 },
+        { "interval": "2025-08-14T00:00:00Z/2025-08-20T23:59:59Z", "number": 22000 }
+      ],
+      "extrudedHeightReference": "RELATIVE_TO_GROUND",
+      "material": { "solidColor": { "color": { "rgba": [255,255,0,150] } } }
+    }
+  }
+]
