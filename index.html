@@ -14,20 +14,20 @@
 <body>
   <div id="cesiumContainer"></div>
   <script>
-    // Crear visor con OSM (sin necesidad de token)
+    // Visor Cesium con OpenStreetMap (sin token)
     const viewer = new Cesium.Viewer("cesiumContainer", {
       imageryProvider: new Cesium.OpenStreetMapImageryProvider(),
       timeline: true,
       animation: true
     });
 
-    // Cargar CZML
+    // Cargar CZML escalonado
     const czmlDataSource = new Cesium.CzmlDataSource();
     viewer.dataSources.add(czmlDataSource);
 
     czmlDataSource.load("cities.czml").then(() => {
       viewer.zoomTo(czmlDataSource);
-      console.log("CZML animado cargado correctamente");
+      console.log("CZML escalonado cargado correctamente");
     }).catch(err => {
       console.error("Error cargando CZML:", err);
     });
