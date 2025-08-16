@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página de Ejemplo CZML</title>
-    <script src="https://cesium.com/downloads/cesiumjs/releases/1.109/Build/Cesium/Cesium.js"></script>
-    <link href="https://cesium.com/downloads/cesiumjs/releases/1.109/Build/Cesium/Widgets/widgets.css" rel="stylesheet">
+    <title>Figuras Geométricas en Ciudades de Colombia</title>
+    <script src="https://cesium.com/downloads/cesiumjs/releases/1.121/Build/Cesium/Cesium.js"></script>
+    <link href="https://cesium.com/downloads/cesiumjs/releases/1.121/Build/Cesium/Widgets/widgets.css" rel="stylesheet">
     <style>
         html, body, #cesiumContainer {
             width: 100%;
@@ -19,18 +19,24 @@
 <body>
     <div id="cesiumContainer"></div>
     <script>
+        // Tu token de Cesium Ion.
         Cesium.Ion.defaultAccessToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJiZTQ4OWZjMi1hZTc0LTQwZTAtODM3MS00ODJmZjlkZWI4NTkiLCJpZCI6MzMxMzYwLCJpYXQiOjE3NTUwNDI1NjV9.tuXtvIQKeq0hz8Em6bpv3GctChxnN05tKnFKdS049GU';
 
         const viewer = new Cesium.Viewer('cesiumContainer', {
             terrain: Cesium.Terrain.fromWorldTerrain(),
-            timeline: false,
-            animation: false,
+            imageryProvider: new Cesium.UrlTemplateImageryProvider({
+                url: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+                credit: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            })
         });
 
-        const czmlDataSource = Cesium.CzmlDataSource.load('czml.json');
+        const czmlDataSource = Cesium.CzmlDataSource.load('cities.czml');
         viewer.dataSources.add(czmlDataSource);
 
-        viewer.zoomTo(czmlDataSource, new Cesium.HeadingPitchRange(0.0, -90, 10000000));
+        viewer.camera.flyTo({
+            destination: Cesium.Cartesian3.fromDegrees(-74.0721, 4.7110, 1200000),
+            duration: 2.0
+        });
     </script>
 </body>
 </html>
