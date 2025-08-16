@@ -19,10 +19,10 @@
 <body>
     <div id="cesiumContainer"></div>
     <script>
-        // Token Cesium Ion
-        Cesium.Ion.defaultAccessToken = 'TU_TOKEN_AQUI';
+        // Token de Cesium Ion (coloca el tuyo)
+        Cesium.Ion.defaultAccessToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJiZTQ4OWZjMi1hZTc0LTQwZTAtODM3MS00ODJmZjlkZWI4NTkiLCJpZCI6MzMxMzYwLCJpYXQiOjE3NTUwNDI1NjV9.tuXtvIQKeq0hz8Em6bpv3GctChxnN05tKnFKdS049GU';
 
-        // Inicializar visor
+        // Crear el visor
         const viewer = new Cesium.Viewer('cesiumContainer', {
             terrain: Cesium.Terrain.fromWorldTerrain(),
             imageryProvider: new Cesium.UrlTemplateImageryProvider({
@@ -33,7 +33,7 @@
             animation: true
         });
 
-        // Cargar el CZML desde archivo
+        // Cargar el archivo CZML
         Cesium.CzmlDataSource.load('cities.czml').then(function(ds) {
             viewer.dataSources.add(ds);
             viewer.zoomTo(ds);
