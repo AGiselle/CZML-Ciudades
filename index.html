@@ -19,21 +19,22 @@
 <body>
     <div id="cesiumContainer"></div>
     <script>
-        // Configurar el token de Cesium. Puedes obtener el tuyo gratis en https://cesium.com/ion/
-        Cesium.Ion.defaultAccessToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJiZTQ4OWZjMi1hZTc0LTQwZTAtODM3MS00ODJmZjlkZWI4NTkiLCJpZCI6MzMxMzYwLCJpYXQiOjE3NTUwNDI1NjV9.tuXtvIQKeq0hz8Em6bpv3GctChxnN05tKnFKdS049GU';
+        // Configurar el token de Cesium Ion.
+        Cesium.Ion.defaultAccessToken = 'TU_TOKEN_DE_CESIUM_ION';
 
-        // Inicializar el visor de Cesium
+        // Inicializar el visor de Cesium.
         const viewer = new Cesium.Viewer('cesiumContainer', {
             terrain: Cesium.Terrain.fromWorldTerrain(),
         });
 
-        // Cargar el archivo CZML
+        // Cargar el archivo CZML.
         const czmlDataSource = Cesium.CzmlDataSource.load('cities.czml');
         viewer.dataSources.add(czmlDataSource);
 
-        // Enfocar la vista en Colombia
+        // Centrar la vista en Colombia.
         viewer.camera.flyTo({
-            destination: Cesium.Cartesian3.fromDegrees(-74.0721, 4.7110, 1000000)
+            destination: Cesium.Cartesian3.fromDegrees(-74.0721, 4.7110, 1200000),
+            duration: 2.0
         });
     </script>
 </body>
