@@ -1,38 +1,35 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="utf-8" />
-    <title>CZML - Ciudades con Figuras</title>
-    <script src="https://cesium.com/downloads/cesiumjs/releases/1.80/Build/Cesium/Cesium.js"></script>
-    <link href="https://cesium.com/downloads/cesiumjs/releases/1.80/Build/Cesium/Widgets/widgets.css" rel="stylesheet" />
-    <style>
-      html, body, #cesiumContainer {
-        width: 100%; height: 100%; margin: 0; padding: 0; overflow: hidden;
-      }
-    </style>
-  </head>
-  <body>
-    <div id="cesiumContainer"></div>
-    <script>
-      // 🔑 Token Cesium Ion (si lo usas con recursos de Ion)
-      Cesium.Ion.defaultAccessToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJiZTQ4OWZjMi1hZTc0LTQwZTAtODM3MS00ODJmZjlkZWI4NTkiLCJpZCI6MzMxMzYwLCJpYXQiOjE3NTUwNDI1NjV9.tuXtvIQKeq0hz8Em6bpv3GctChxnN05tKnFKdS049GU";
+<head>
+  <meta charset="utf-8" />
+  <title>CZML - Ciudades con Figuras</title>
+  <script src="https://cesium.com/downloads/cesiumjs/releases/1.109/Build/Cesium/Cesium.js"></script>
+  <link href="https://cesium.com/downloads/cesiumjs/releases/1.109/Build/Cesium/Widgets/widgets.css" rel="stylesheet" />
+  <style>
+    html, body, #cesiumContainer {
+      width: 100%; height: 100%; margin: 0; padding: 0; overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+  <div id="cesiumContainer"></div>
+  <script>
+    // Inicializar visor Cesium
+    const viewer = new Cesium.Viewer("cesiumContainer", {
+      timeline: true,
+      animation: true
+    });
 
-      // Crear el visor con mapa base
-      const viewer = new Cesium.Viewer("cesiumContainer", {
-        imageryProvider: new Cesium.IonImageryProvider({ assetId: 2 }), // Bing Maps Aerial
-        baseLayerPicker: true,
-        timeline: true,
-        animation: true
-        // ❌ sin terreno porque tu versión no lo soporta
-      });
+    // Cargar CZML
+    const czmlDataSource = new Cesium.CzmlDataSource();
+    viewer.dataSources.add(czmlDataSource);
 
-      // Cargar el archivo CZML
-      const czmlDataSource = new Cesium.CzmlDataSource();
-      viewer.dataSources.add(czmlDataSource);
-
-      czmlDataSource.load("cities.czml").then(function() {
-        viewer.zoomTo(czmlDataSource);
-      });
-    </script>
-  </body>
+    czmlDataSource.load("cities.czml").then(() => {
+      viewer.zoomTo(czmlDataSource);
+      console.log("CZML cargado correctamente");
+    }).catch(err => {
+      console.error("Error cargando CZML:", err);
+    });
+  </script>
+</body>
 </html>
