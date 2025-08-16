@@ -19,6 +19,7 @@
       "coordinates": {
         "wsen": [-74.12, 4.67, -74.02, 4.75]
       },
+      "height": 0,
       "extrudedHeight": [
         { "interval": "2025-08-01T00:00:00Z/2025-08-06T23:59:59Z", "number": 1000 },
         { "interval": "2025-08-07T00:00:00Z/2025-08-13T23:59:59Z", "number": 3000 },
@@ -43,6 +44,7 @@
     "ellipse": {
       "semiMinorAxis": 10000,
       "semiMajorAxis": 15000,
+      "height": 0,
       "extrudedHeight": [
         { "interval": "2025-08-01T00:00:00Z/2025-08-06T23:59:59Z", "number": 500 },
         { "interval": "2025-08-07T00:00:00Z/2025-08-13T23:59:59Z", "number": 2500 },
@@ -70,6 +72,7 @@
           -76.536, 3.42, 0
         ]
       },
+      "height": 0,
       "extrudedHeight": [
         { "interval": "2025-08-01T00:00:00Z/2025-08-06T23:59:59Z", "number": 800 },
         { "interval": "2025-08-07T00:00:00Z/2025-08-13T23:59:59Z", "number": 2800 },
@@ -99,6 +102,7 @@
           -74.79, 10.965, 0
         ]
       },
+      "height": 0,
       "extrudedHeight": [
         { "interval": "2025-08-01T00:00:00Z/2025-08-06T23:59:59Z", "number": 1200 },
         { "interval": "2025-08-07T00:00:00Z/2025-08-13T23:59:59Z", "number": 3200 },
