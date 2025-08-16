@@ -1,19 +1,96 @@
-// Token Cesium Ion
-Cesium.Ion.defaultAccessToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJiZTQ4OWZjMi1hZTc0LTQwZTAtODM3MS00ODJmZjlkZWI4NTkiLCJpZCI6MzMxMzYwLCJpYXQiOjE3NTUwNDI1NjV9.tuXtvIQKeq0hz8Em6bpv3GctChxnN05tKnFKdS049GU";
+[
+  {
+    "id": "document",
+    "name": "Ciudades animadas",
+    "version": "1.0",
+    "clock": {
+      "interval": "2025-08-01T00:00:00Z/2025-08-29T23:59:59Z",
+      "currentTime": "2025-08-16T12:00:00Z",
+      "multiplier": 90000,
+      "range": "LOOP"
+    }
+  },
 
-// Crear visor con terreno y animación
-const viewer = new Cesium.Viewer("cesiumContainer", {
-    terrainProvider: Cesium.createWorldTerrain(),
-    timeline: true,
-    animation: true,
-    baseLayerPicker: true
-});
+  {
+    "id": "bogota-ellipse",
+    "name": "Bogotá (Elipse Verde)",
+    "position": { "cartographicDegrees": [-74.08175, 4.60971, 0] },
+    "ellipse": {
+      "semiMajorAxis": 20000,
+      "semiMinorAxis": 10000,
+      "height": 0,
+      "heightReference": "RELATIVE_TO_GROUND",
+      "extrudedHeight": [
+        { "interval": "2025-08-01T00:00:00Z/2025-08-10T23:59:59Z", "number": 0 },
+        { "interval": "2025-08-11T00:00:00Z/2025-08-20T23:59:59Z", "number": 5000 },
+        { "interval": "2025-08-21T00:00:00Z/2025-08-29T23:59:59Z", "number": 10000 }
+      ],
+      "extrudedHeightReference": "RELATIVE_TO_GROUND",
+      "material": { "solidColor": { "color": { "rgba": [0, 255, 0, 150] } } }
+    }
+  },
 
-// Crear y cargar CZML
-const czmlDataSource = new Cesium.CzmlDataSource();
-viewer.dataSources.add(czmlDataSource);
+  {
+    "id": "medellin-rectangle",
+    "name": "Medellín (Rectángulo Rojo)",
+    "rectangle": {
+      "coordinates": { "wsenDegrees": [-75.6, 6.2, -75.55, 6.3] },
+      "height": 0,
+      "heightReference": "RELATIVE_TO_GROUND",
+      "extrudedHeight": [
+        { "interval": "2025-08-01T00:00:00Z/2025-08-10T23:59:59Z", "number": 0 },
+        { "interval": "2025-08-11T00:00:00Z/2025-08-20T23:59:59Z", "number": 3000 },
+        { "interval": "2025-08-21T00:00:00Z/2025-08-29T23:59:59Z", "number": 15000 }
+      ],
+      "extrudedHeightReference": "RELATIVE_TO_GROUND",
+      "material": { "solidColor": { "color": { "rgba": [255, 0, 0, 150] } } }
+    }
+  },
 
-czmlDataSource.load("ciudades.czml").then(() => {
-    console.log("CZML cargado correctamente");
-    viewer.zoomTo(czmlDataSource);
-}).catch((err) => console.error("Error cargando CZML:", err));
+  {
+    "id": "cali-polygon",
+    "name": "Cali (Triángulo Azul)",
+    "polygon": {
+      "positions": {
+        "cartographicDegrees": [
+          -76.55, 3.45, 0,
+          -76.50, 3.45, 0,
+          -76.525, 3.48, 0
+        ]
+      },
+      "height": 0,
+      "heightReference": "RELATIVE_TO_GROUND",
+      "extrudedHeight": [
+        { "interval": "2025-08-01T00:00:00Z/2025-08-10T23:59:59Z", "number": 0 },
+        { "interval": "2025-08-11T00:00:00Z/2025-08-20T23:59:59Z", "number": 4000 },
+        { "interval": "2025-08-21T00:00:00Z/2025-08-29T23:59:59Z", "number": 18000 }
+      ],
+      "extrudedHeightReference": "RELATIVE_TO_GROUND",
+      "material": { "solidColor": { "color": { "rgba": [0, 0, 255, 150] } } }
+    }
+  },
+
+  {
+    "id": "cartagena-polygon",
+    "name": "Cartagena (Cuadrado Amarillo)",
+    "polygon": {
+      "positions": {
+        "cartographicDegrees": [
+          -75.55, 10.40, 0,
+          -75.52, 10.40, 0,
+          -75.52, 10.44, 0,
+          -75.55, 10.44, 0
+        ]
+      },
+      "height": 0,
+      "heightReference": "RELATIVE_TO_GROUND",
+      "extrudedHeight": [
+        { "interval": "2025-08-01T00:00:00Z/2025-08-10T23:59:59Z", "number": 0 },
+        { "interval": "2025-08-11T00:00:00Z/2025-08-20T23:59:59Z", "number": 6000 },
+        { "interval": "2025-08-21T00:00:00Z/2025-08-29T23:59:59Z", "number": 12000 }
+      ],
+      "extrudedHeightReference": "RELATIVE_TO_GROUND",
+      "material": { "solidColor": { "color": { "rgba": [255, 255, 0, 150] } } }
+    }
+  }
+]
