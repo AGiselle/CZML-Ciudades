@@ -14,12 +14,12 @@
   <body>
     <div id="cesiumContainer"></div>
     <script>
-      // Crear visor con el terreno correcto en CesiumJS 1.120
+      // 👇 ESTA ES LA LÍNEA CORRECTA
       const viewer = new Cesium.Viewer("cesiumContainer", {
         terrainProvider: Cesium.CesiumTerrainProvider.fromWorldTerrain()
       });
 
-      // Cargar el archivo CZML (tiene las figuras)
+      // Cargar el archivo CZML
       const czmlDataSource = new Cesium.CzmlDataSource();
       viewer.dataSources.add(czmlDataSource);
 
