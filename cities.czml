@@ -1,7 +1,7 @@
 [
   {
     "id": "document",
-    "name": "Ciudades con figuras animadas",
+    "name": "Ciudades Animadas Escalonadas",
     "version": "1.0",
     "clock": {
       "interval": "2025-08-16T12:00:00Z/2025-08-16T12:01:00Z",
@@ -18,7 +18,7 @@
       "semiMajorAxis": 20000,
       "semiMinorAxis": 10000,
       "material": { "solidColor": { "color": { "rgba": [0,255,0,150] } } },
-      "extrudedHeight": { "epoch": "2025-08-16T12:00:00Z", "number": [0,0,30,20000] }
+      "extrudedHeight": { "epoch": "2025-08-16T12:00:00Z", "number": [0,0,10,20000] }
     }
   },
   {
@@ -27,7 +27,7 @@
     "rectangle": {
       "coordinates": { "wsenDegrees": [-75.65,6.15,-75.55,6.25] },
       "material": { "solidColor": { "color": { "rgba": [255,0,0,150] } } },
-      "extrudedHeight": { "epoch": "2025-08-16T12:00:00Z", "number": [0,0,30,15000] }
+      "extrudedHeight": { "epoch": "2025-08-16T12:00:10Z", "number": [0,0,10,15000] }
     }
   },
   {
@@ -36,7 +36,7 @@
     "polygon": {
       "positions": { "cartographicDegrees": [-76.55,3.45,0,-76.50,3.45,0,-76.525,3.48,0,-76.55,3.45,0] },
       "material": { "solidColor": { "color": { "rgba": [0,0,255,150] } } },
-      "extrudedHeight": { "epoch": "2025-08-16T12:00:00Z", "number": [0,0,30,18000] }
+      "extrudedHeight": { "epoch": "2025-08-16T12:00:20Z", "number": [0,0,10,18000] }
     }
   },
   {
@@ -45,7 +45,7 @@
     "polygon": {
       "positions": { "cartographicDegrees": [-75.60,10.40,0,-75.50,10.40,0,-75.50,10.45,0,-75.60,10.45,0,-75.60,10.40,0] },
       "material": { "solidColor": { "color": { "rgba": [255,255,0,150] } } },
-      "extrudedHeight": { "epoch": "2025-08-16T12:00:00Z", "number": [0,0,30,12000] }
+      "extrudedHeight": { "epoch": "2025-08-16T12:00:30Z", "number": [0,0,10,12000] }
     }
   }
 ]
