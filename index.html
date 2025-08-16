@@ -19,20 +19,20 @@
 <body>
     <div id="cesiumContainer"></div>
     <script>
-        // Configurar el token de Cesium Ion.
+        // ¡Importante! Reemplaza esto con tu token válido de Cesium Ion.
         Cesium.Ion.defaultAccessToken = 'TU_TOKEN_DE_CESIUM_ION';
 
-        // Inicializar el visor de Cesium con el terreno e imágenes del mundo.
         const viewer = new Cesium.Viewer('cesiumContainer', {
             terrain: Cesium.Terrain.fromWorldTerrain(),
-            imageryProvider: Cesium.createWorldImagery() // Esta línea es la que soluciona el problema
+            imageryProvider: new Cesium.UrlTemplateImageryProvider({
+                url: "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                credit: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+            })
         });
 
-        // Cargar el archivo CZML.
         const czmlDataSource = Cesium.CzmlDataSource.load('cities.czml');
         viewer.dataSources.add(czmlDataSource);
 
-        // Centrar la vista en Colombia.
         viewer.camera.flyTo({
             destination: Cesium.Cartesian3.fromDegrees(-74.0721, 4.7110, 1200000),
             duration: 2.0
