@@ -1,121 +1,69 @@
 [
-  {
-    "id": "document",
-    "name": "Figuras Geométricas en Ciudades de Colombia",
-    "version": "1.0",
-    "clock": {
-      "interval": "2025-08-01T00:00:00Z/2025-08-29T23:59:59Z",
-      "currentTime": "2025-08-01T00:00:00Z",
-      "multiplier": 1000
-    }
-  },
-  {
-    "id": "bogota-rectangle",
-    "name": "Rectángulo en Bogotá",
-    "position": {
-      "cartographicDegrees": [-74.0721, 4.7110, 0]
+    {
+        "id": "document",
+        "name": "Ejemplo de figuras CZML",
+        "version": "1.0"
     },
-    "rectangle": {
-      "coordinates": {
-        "wsen": [-74.12, 4.67, -74.02, 4.75]
-      },
-      "height": 0,
-      "extrudedHeight": [
-        { "interval": "2025-08-01T00:00:00Z/2025-08-06T23:59:59Z", "number": 1000 },
-        { "interval": "2025-08-07T00:00:00Z/2025-08-13T23:59:59Z", "number": 3000 },
-        { "interval": "2025-08-14T00:00:00Z/2025-08-20T23:59:59Z", "number": 5000 },
-        { "interval": "2025-08-21T00:00:00Z/2025-08-26T23:59:59Z", "number": 7000 },
-        { "interval": "2025-08-27T00:00:00Z/2025-08-29T23:59:59Z", "number": 9000 }
-      ],
-      "extrudedHeightReference": "RELATIVE_TO_GROUND",
-      "material": {
-        "solidColor": {
-          "color": { "rgba": [255, 0, 0, 150] }
+    {
+        "id": "linea_de_la_vida_01",
+        "name": "Línea de la vida",
+        "polyline": {
+            "positions": {
+                "cartographicDegrees": [
+                    -74.088, 4.619, 200,
+                    -74.07, 4.62, 200,
+                    -74.067, 4.621, 200
+                ]
+            },
+            "width": 1,
+            "material": {
+                "solidColor": {
+                    "color": {
+                        "rgba": [255, 0, 0, 255]
+                    }
+                }
+            }
         }
-      }
-    }
-  },
-  {
-    "id": "medellin-ellipse",
-    "name": "Elipse en Medellín",
-    "position": {
-      "cartographicDegrees": [-75.5674, 6.2442, 0]
     },
-    "ellipse": {
-      "semiMinorAxis": 10000,
-      "semiMajorAxis": 15000,
-      "height": 0,
-      "extrudedHeight": [
-        { "interval": "2025-08-01T00:00:00Z/2025-08-06T23:59:59Z", "number": 500 },
-        { "interval": "2025-08-07T00:00:00Z/2025-08-13T23:59:59Z", "number": 2500 },
-        { "interval": "2025-08-14T00:00:00Z/2025-08-20T23:59:59Z", "number": 4500 },
-        { "interval": "2025-08-21T00:00:00Z/2025-08-26T23:59:59Z", "number": 6500 },
-        { "interval": "2025-08-27T00:00:00Z/2025-08-29T23:59:59Z", "number": 8500 }
-      ],
-      "extrudedHeightReference": "RELATIVE_TO_GROUND",
-      "material": {
-        "solidColor": {
-          "color": { "rgba": [255, 0, 0, 150] }
+    {
+        "id": "linea_de_la_vida_02",
+        "name": "Línea de la vida",
+        "polyline": {
+            "positions": {
+                "cartographicDegrees": [
+                    -74.088, 4.619, 200,
+                    -74.087, 4.617, 200,
+                    -74.08, 4.61, 200
+                ]
+            },
+            "width": 1,
+            "material": {
+                "solidColor": {
+                    "color": {
+                        "rgba": [0, 255, 0, 255]
+                    }
+                }
+            }
         }
-      }
-    }
-  },
-  {
-    "id": "cali-polygon",
-    "name": "Triángulo en Cali",
-    "polygon": {
-      "positions": {
-        "cartographicDegrees": [
-          -76.536, 3.42, 0,
-          -76.526, 3.425, 0,
-          -76.521, 3.415, 0,
-          -76.536, 3.42, 0
-        ]
-      },
-      "height": 0,
-      "extrudedHeight": [
-        { "interval": "2025-08-01T00:00:00Z/2025-08-06T23:59:59Z", "number": 800 },
-        { "interval": "2025-08-07T00:00:00Z/2025-08-13T23:59:59Z", "number": 2800 },
-        { "interval": "2025-08-14T00:00:00Z/2025-08-20T23:59:59Z", "number": 4800 },
-        { "interval": "2025-08-21T00:00:00Z/2025-08-26T23:59:59Z", "number": 6800 },
-        { "interval": "2025-08-27T00:00:00Z/2025-08-29T23:59:59Z", "number": 8800 }
-      ],
-      "extrudedHeightReference": "RELATIVE_TO_GROUND",
-      "material": {
-        "solidColor": {
-          "color": { "rgba": [255, 0, 0, 150] }
+    },
+    {
+        "id": "linea_de_la_vida_03",
+        "name": "Línea de la vida",
+        "polyline": {
+            "positions": {
+                "cartographicDegrees": [
+                    -74.088, 4.619, 200,
+                    -74.08, 4.61, 200
+                ]
+            },
+            "width": 1,
+            "material": {
+                "solidColor": {
+                    "color": {
+                        "rgba": [0, 0, 255, 255]
+                    }
+                }
+            }
         }
-      }
     }
-  },
-  {
-    "id": "barranquilla-polygon",
-    "name": "Pentágono en Barranquilla",
-    "polygon": {
-      "positions": {
-        "cartographicDegrees": [
-          -74.79, 10.965, 0,
-          -74.785, 10.975, 0,
-          -74.775, 10.97, 0,
-          -74.78, 10.96, 0,
-          -74.79, 10.96, 0,
-          -74.79, 10.965, 0
-        ]
-      },
-      "height": 0,
-      "extrudedHeight": [
-        { "interval": "2025-08-01T00:00:00Z/2025-08-06T23:59:59Z", "number": 1200 },
-        { "interval": "2025-08-07T00:00:00Z/2025-08-13T23:59:59Z", "number": 3200 },
-        { "interval": "2025-08-14T00:00:00Z/2025-08-20T23:59:59Z", "number": 5200 },
-        { "interval": "2025-08-21T00:00:00Z/2025-08-26T23:59:59Z", "number": 7200 },
-        { "interval": "2025-08-27T00:00:00Z/2025-08-29T23:59:59Z", "number": 9200 }
-      ],
-      "extrudedHeightReference": "RELATIVE_TO_GROUND",
-      "material": {
-        "solidColor": {
-          "color": { "rgba": [255, 0, 0, 150] }
-        }
-      }
-    }
-  }
 ]
