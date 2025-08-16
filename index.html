@@ -2,7 +2,7 @@
 <html lang="es">
   <head>
     <meta charset="utf-8" />
-    <title>CZML Ciudades</title>
+    <title>CZML - Ciudades con Figuras</title>
     <script src="https://cesium.com/downloads/cesiumjs/releases/1.120/Build/Cesium/Cesium.js"></script>
     <link href="https://cesium.com/downloads/cesiumjs/releases/1.120/Build/Cesium/Widgets/widgets.css" rel="stylesheet" />
     <style>
@@ -14,9 +14,9 @@
   <body>
     <div id="cesiumContainer"></div>
     <script>
-      // 👇 ESTA ES LA LÍNEA CORRECTA
+      // Crear el visor con mapa base y terreno mundial
       const viewer = new Cesium.Viewer("cesiumContainer", {
-        terrainProvider: Cesium.CesiumTerrainProvider.fromWorldTerrain()
+        terrainProvider: Cesium.createWorldTerrain()
       });
 
       // Cargar el archivo CZML
