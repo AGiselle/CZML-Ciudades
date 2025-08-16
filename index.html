@@ -14,23 +14,20 @@
 <body>
   <div id="cesiumContainer"></div>
   <script>
-    // 🔑 Tu token Cesium Ion
-    Cesium.Ion.defaultAccessToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJiZTQ4OWZjMi1hZTc0LTQwZTAtODM3MS00ODJmZjlkZWI4NTkiLCJpZCI6MzMxMzYwLCJpYXQiOjE3NTUwNDI1NjV9.tuXtvIQKeq0hz8Em6bpv3GctChxnN05tKnFKdS049GU";
-
-    // Visor Cesium con Ion (Bing Maps) y animación
+    // Visor con OpenStreetMap (no requiere token)
     const viewer = new Cesium.Viewer("cesiumContainer", {
-      imageryProvider: new Cesium.IonImageryProvider({ assetId: 2 }),
+      imageryProvider: new Cesium.OpenStreetMapImageryProvider(),
       timeline: true,
       animation: true
     });
 
-    // Cargar CZML escalonado
+    // Cargar CZML
     const czmlDataSource = new Cesium.CzmlDataSource();
     viewer.dataSources.add(czmlDataSource);
 
     czmlDataSource.load("cities.czml").then(() => {
       viewer.zoomTo(czmlDataSource);
-      console.log("CZML escalonado cargado correctamente");
+      console.log("CZML escalonado cargado correctamente con extrusión");
     }).catch(err => {
       console.error("Error cargando CZML:", err);
     });
