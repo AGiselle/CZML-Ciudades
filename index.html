@@ -14,9 +14,12 @@
 <body>
   <div id="cesiumContainer"></div>
   <script>
-    // Visor Cesium con OpenStreetMap (sin token)
+    // 🔑 Tu token Cesium Ion
+    Cesium.Ion.defaultAccessToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJiZTQ4OWZjMi1hZTc0LTQwZTAtODM3MS00ODJmZjlkZWI4NTkiLCJpZCI6MzMxMzYwLCJpYXQiOjE3NTUwNDI1NjV9.tuXtvIQKeq0hz8Em6bpv3GctChxnN05tKnFKdS049GU";
+
+    // Visor Cesium con Ion (Bing Maps) y animación
     const viewer = new Cesium.Viewer("cesiumContainer", {
-      imageryProvider: new Cesium.OpenStreetMapImageryProvider(),
+      imageryProvider: new Cesium.IonImageryProvider({ assetId: 2 }),
       timeline: true,
       animation: true
     });
