@@ -1,34 +1,82 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="utf-8">
-  <title>Ciudades con CZML</title>
-  <script src="https://cesium.com/downloads/cesiumjs/releases/1.116/Build/Cesium/Cesium.js"></script>
-  <link href="https://cesium.com/downloads/cesiumjs/releases/1.116/Build/Cesium/Widgets/widgets.css" rel="stylesheet">
-  <style>
-    html, body, #cesiumContainer {
-      width: 100%; height: 100%; margin: 0; padding: 0; overflow: hidden;
+[
+  {
+    "id": "document",
+    "name": "Ciudades con figuras",
+    "version": "1.0"
+  },
+  {
+    "id": "ellipse-bogota",
+    "name": "Elipse en Bogotá",
+    "position": {
+      "cartographicDegrees": [-74.08175, 4.60971, 0]
+    },
+    "ellipse": {
+      "semiMajorAxis": 20000.0,
+      "semiMinorAxis": 10000.0,
+      "material": { "solidColor": { "color": { "rgba": [0, 255, 0, 150] } } },
+      "extrudedHeight": [
+        {
+          "epoch": "2025-08-16T12:00:00Z",
+          "number": [0, 0, 10, 5000, 20, 10000]
+        }
+      ]
     }
-  </style>
-</head>
-<body>
-  <div id="cesiumContainer"></div>
-  <script>
-    // Configurar tu token
-    Cesium.Ion.defaultAccessToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJiZTQ4OWZjMi1hZTc0LTQwZTAtODM3MS00ODJmZjlkZWI4NTkiLCJpZCI6MzMxMzYwLCJpYXQiOjE3NTUwNDI1NjV9.tuXtvIQKeq0hz8Em6bpv3GctChxnN05tKnFKdS049GU';
-
-    // Crear el visor con mapa satélite + relieve
-    const viewer = new Cesium.Viewer('cesiumContainer', {
-      imageryProvider: new Cesium.IonImageryProvider({ assetId: 3 }), // 3 = Satélite Bing
-      terrainProvider: Cesium.createWorldTerrain(),
-      baseLayerPicker: false
-    });
-
-    // Cargar tu archivo CZML
-    Cesium.CzmlDataSource.load('cities.czml').then(function(ds) {
-      viewer.dataSources.add(ds);
-      viewer.zoomTo(ds);
-    });
-  </script>
-</body>
-</html>
+  },
+  {
+    "id": "rectangle-medellin",
+    "name": "Rectángulo en Medellín",
+    "rectangle": {
+      "coordinates": {
+        "wsenDegrees": [-75.6, 6.2, -75.55, 6.3]
+      },
+      "material": { "solidColor": { "color": { "rgba": [255, 0, 0, 150] } } },
+      "extrudedHeight": [
+        {
+          "epoch": "2025-08-16T12:00:00Z",
+          "number": [0, 0, 10, 3000, 20, 8000]
+        }
+      ]
+    }
+  },
+  {
+    "id": "triangle-cali",
+    "name": "Triángulo en Cali",
+    "polygon": {
+      "positions": {
+        "cartographicDegrees": [
+          -76.55, 3.45, 0,
+          -76.50, 3.45, 0,
+          -76.525, 3.48, 0
+        ]
+      },
+      "material": { "solidColor": { "color": { "rgba": [0, 0, 255, 150] } } },
+      "extrudedHeight": [
+        {
+          "epoch": "2025-08-16T12:00:00Z",
+          "number": [0, 0, 10, 4000, 20, 9000]
+        }
+      ]
+    }
+  },
+  {
+    "id": "polygon-cartagena",
+    "name": "Polígono en Cartagena",
+    "polygon": {
+      "positions": {
+        "cartographicDegrees": [
+          -75.55, 10.40, 0,
+          -75.52, 10.40, 0,
+          -75.52, 10.44, 0,
+          -75.55, 10.44, 0
+        ]
+      },
+      "material": { "solidColor": { "color": { "rgba": [255, 255, 0, 150] } } },
+      "extrudedHeight": [
+        {
+          "epoch": "2025-08-16T12:00:00Z",
+          "number": [0, 0, 10, 2000, 20, 6000]
+        }
+      ]
+    }
+  }
+]
